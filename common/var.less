@@ -1,0 +1,552 @@
+
+.full-size() { width: 100%; height: 100%; }
+.full-width() { width: 100%; }
+.full-height() { height: 100%; }
+
+.flex() { display: flex }
+.flex-wrap() { display: flex; flex-wrap: wrap }
+.flex-center() { display: flex; align-items: center; justify-content: center }
+
+.justify-center() { display: flex; justify-content: center }
+.justify-center { display: flex; justify-content: center }
+.justify-around() { display: flex; justify-content: space-around }
+.justify-between() { display: flex; justify-content: space-between }
+.justify-evenly() { display: flex; justify-content: space-evenly }
+.justify-start() { display: flex; justify-content: flex-start }
+.justify-end() { display: flex; justify-content: flex-end }
+
+.items-start() { display: flex; align-items: flex-start }
+.items-center() { display: flex; align-items: center }
+.items-end() { display: flex; align-items: flex-end }
+
+.column() { display: flex; flex-direction: column }
+.column-center() { display: flex; flex-direction: column; align-items: center; justify-content: center }
+.column-around() { display: flex; flex-direction: column; align-items: center; justify-content: space-around }
+.column-start-items() { display: flex; flex-direction: column; align-items: flex-start }
+
+.un-button() {
+  padding: 0;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+.un-input() {
+  padding: 0;
+  outline: none;
+  border: none;
+  background: transparent;
+  &:focus {
+    outline: none;
+  }
+}
+.un-link() {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+@columns: 10;
+@atom: (100% / @columns);
+
+
+@offset: 0px;
+@offset_tiny: @offset;
+@offset_xxs: @offset;
+@offset_xs: @offset;
+@offset_xsm: @offset;
+@offset_sm: @offset;
+@offset_md: @offset;
+@offset_lg: @offset;
+
+@break_tiny: 310px;
+@break_xxs: 359px;
+@break_xs: 410px;
+@break_xsm: 560px;
+@break_sm: 660px;
+@break_md: 730px;
+@break_lg: 815px;
+
+@tiny: 310px;
+@xxs: 359px;
+@xs: 410px;
+@xsm: 560px;
+@sm: 660px;
+@md: 730px;
+@lg: 815px;
+
+
+@l: landscape;
+@p: portrait;
+
+
+
+.size(@n){
+  @val: 100% / @columns * @n;
+  width: ~"calc(@{val} - @{offset})";
+}
+
+.size-tiny(@n){
+  @val: 100% / @columns * @n;
+  .tiny(width, ~"calc(@{val} - @{offset_tiny})");
+}
+
+.size-xxs(@n){
+  @val: 100% / @columns * @n;
+  .xxs(width, ~"calc(@{val} - @{offset_xxs})");
+}
+
+.size-xs(@n){
+  @val: 100% / @columns * @n;
+  .xs(width, ~"calc(@{val} - @{offset_xs})");
+}
+
+.size-xsm(@n){
+  @val: 100% / @columns * @n;
+  .xsm(width, ~"calc(@{val} - @{offset_xsm})");
+}
+
+.size-sm(@n){
+  @val: 100% / @columns * @n;
+  .sm(width, ~"calc(@{val} - @{offset_sm})");
+}
+
+.size-md(@n){
+  @val: 100% / @columns * @n;
+  .md(width, ~"calc(@{val} - @{offset_md})");
+}
+
+.size-lg(@n){
+  @val: 100% / @columns * @n;
+  .lg(width, ~"calc(@{val} - @{offset_lg})");
+}
+
+
+
+
+.size-h(@n){
+  @val: 100% / @columns * @n;
+  height: ~"calc(@{val} - @{offset})";
+}
+
+.size-tiny-h(@n){
+  @val: 100% / @columns * @n;
+  .tiny(height, ~"calc(@{val} - @{offset})");
+}
+
+.size-xxs-h(@n){
+  @val: 100% / @columns * @n;
+  .xxs(height, ~"calc(@{val} - @{offset})");
+}
+
+.size-xs-h(@n){
+  @val: 100% / @columns * @n;
+  .xs(height, ~"calc(@{val} - @{offset})");
+}
+
+.size-xsm-h(@n){
+  @val: 100% / @columns * @n;
+  .xsm(height, ~"calc(@{val} - @{offset})");
+}
+
+.size-sm-h(@n){
+  @val: 100% / @columns * @n;
+  .sm(height, ~"calc(@{val} - @{offset})");
+}
+
+.size-md-h(@n){
+  @val: 100% / @columns * @n;
+  .md(height, ~"calc(@{val} - @{offset})");
+}
+
+.size-lg-h(@n){
+  @val: 100% / @columns * @n;
+  .lg(height, ~"calc(@{val} - @{offset})");
+}
+
+/* MIXINS */
+
+.tiny(@name, @value){
+  @media screen and (min-width: @break_tiny){
+    @{name}: @value;
+  }
+}
+
+.tiny-o(@orient, @name, @value){
+  @media screen and (min-width: @break_tiny) and (orientation: @orient){
+    @{name}: @value;
+  }
+}
+
+.tiny-b(@content){
+  @media screen and (min-width: @break_tiny){
+    @content();
+  }
+}
+
+.tiny-block(@orient, @content){
+  @media screen and (min-width: @break_tiny) and (orientation: @orient){
+    @content();
+  }
+}
+
+.tiny-h(@height, @orient, @content){
+  @media screen and (min-width: @break_tiny) and (min-height: @height) and (orientation: @orient){
+    @content();
+  }
+}
+
+/*___________*/
+
+.xxs(@name, @value){
+  @media screen and (min-width: @break_xxs){
+    @{name}: @value;
+  }
+}
+
+.xxs-o(@orient, @name, @value){
+  @media screen and (min-width: @break_xxs) and (orientation: @orient){
+    @{name}: @value;
+  }
+}
+
+.xxs-b(@content){
+  @media screen and (min-width: @break_xxs){
+    @content();
+  }
+}
+
+.xxs-block(@orient, @content){
+  @media screen and (min-width: @break_xxs) and (orientation: @orient){
+    @content();
+  }
+}
+
+.xxs-h(@height, @orient, @content){
+  @media screen and (min-width: @break_xxs) and (min-height: @height) and (orientation: @orient){
+    @content();
+  }
+}
+
+
+/*___________*/
+
+
+.xs(@name, @value){
+  @media screen and (min-width: @break_xs){
+    @{name}: @value;
+  }
+}
+
+.xs-o(@orient, @name, @value){
+  @media screen and (min-width: @break_xs) and (orientation: @orient){
+    @{name}: @value;
+  }
+}
+
+.xs-b(@content){
+  @media screen and (min-width: @break_xs){
+    @content();
+  }
+}
+
+.xs-block(@orient, @content){
+  @media screen and (min-width: @break_xs) and (orientation: @orient){
+    @content();
+  }
+}
+
+.xs-h(@height, @orient, @content){
+  @media screen and (min-width: @break_xs) and (min-height: @height) and (orientation: @orient){
+    @content();
+  }
+}
+
+
+/*___________*/
+
+
+.xsm(@name, @value){
+  @media screen and (min-width: @break_xsm){
+    @{name}: @value;
+  }
+}
+
+.xsm-o(@orient, @name, @value){
+  @media screen and (min-width: @break_xsm) and (orientation: @orient){
+    @{name}: @value;
+  }
+}
+
+.xsm-b(@content){
+  @media screen and (min-width: @break_xsm){
+    @content();
+  }
+}
+
+.xsm-block(@orient, @content){
+  @media screen and (min-width: @break_xsm) and (orientation: @orient){
+    @content();
+  }
+}
+
+.xsm-h(@height, @orient, @content){
+  @media screen and (min-width: @break_xsm) and (min-height: @height) and (orientation: @orient){
+    @content();
+  }
+}
+
+
+/*___________*/
+
+
+.sm(@name, @value){
+  @media screen and (min-width: @break_sm){
+    @{name}: @value;
+  }
+}
+
+.sm-o(@orient, @name, @value){
+  @media screen and (min-width: @break_sm) and (orientation: @orient){
+    @{name}: @value;
+  }
+}
+
+.sm-b(@content){
+  @media screen and (min-width: @break_sm){
+    @content();
+  }
+}
+
+.sm-block(@orient, @content){
+  @media screen and (min-width: @break_sm) and (orientation: @orient){
+    @content();
+  }
+}
+
+.sm-h(@height, @orient, @content){
+  @media screen and (min-width: @break_sm) and (min-height: @height) and (orientation: @orient){
+    @content();
+  }
+}
+
+
+/*___________*/
+
+
+.md(@name, @value){
+  @media screen and (min-width: @break_md){
+    @{name}: @value;
+  }
+}
+
+.md-o(@orient, @name, @value){
+  @media screen and (min-width: @break_md) and (orientation: @orient){
+    @{name}: @value;
+  }
+}
+
+.md-b(@content){
+  @media screen and (min-width: @break_md){
+    @content();
+  }
+}
+
+.md-block(@orient, @content){
+  @media screen and (min-width: @break_md) and (orientation: @orient){
+    @content();
+  }
+}
+
+.md-h(@height, @orient, @content){
+  @media screen and (min-width: @break_md) and (min-height: @height) and (orientation: @orient){
+    @content();
+  }
+}
+
+
+/*___________*/
+
+
+.lg(@name, @value){
+  @media screen and (min-width: @break_lg){
+    @{name}: @value;
+  }
+}
+
+.lg-o(@orient, @name, @value){
+  @media screen and (min-width: @break_lg)  and (orientation: @orient){
+    @{name}: @value;
+  }
+}
+
+.lg-b(@content){
+  @media screen and (min-width: @break_lg){
+    @content();
+  }
+}
+
+.lg-block(@orient, @content){
+  @media screen and (min-width: @break_lg) and (orientation: @orient){
+    @content();
+  }
+}
+
+.lg-h(@height, @orient, @content){
+  @media screen and (min-width: @break_lg) and (min-height: @height) and (orientation: @orient){
+    @content();
+  }
+}
+
+
+/* FROM TO */
+
+
+.landscape(@name, @value){
+  @media screen and (orientation: landscape){
+    @{name}: @value;
+  }
+}
+.landscape-block(@content){
+  @media screen and (orientation: landscape){
+    @content();
+  }
+}
+.landscape-h( @height, @name, @value ) {
+  @media screen and (min-height: @height) and (orientation: landscape){
+    @{name}: @value;
+  }
+}
+.landscape-block-h( @height, @content ) {
+  @media screen and (min-height: @height) and (orientation: landscape){
+    @content();
+  }
+}
+
+.portrait(@name, @value){
+  @media screen and (orientation: portrait){
+    @{name}: @value;
+  }
+}
+.portrait-block(@content){
+  @media screen and (orientation: portrait){
+    @content();
+  }
+}
+
+.portrait-w(@width, @name, @value){
+  @media screen and (orientation: portrait) and ( min-width: @width) {
+    @{name}: @value;
+  }
+}
+
+.portrait-h(@height, @name, @value){
+  @media screen and (orientation: portrait) and ( min-height: @height) {
+    @{name}: @value;
+  }
+}
+
+
+.from(@min_width, @content){
+  @media screen and (min-width: @min_width){
+    @content();
+  }
+}
+
+.from-h(@min_height, @content){
+  @media screen and (min-height: @min_height){
+    @content();
+  }
+}
+.from-h(@min_height, @name, @value){
+  @media screen and (min-height: @min_height){
+      @{name}: @value;
+  }
+}
+
+.from-to(@min_width, @max_width, @content){
+  @media screen and (min-width: @min_width) and (max-width: @max_width){
+    @content();
+  }
+}
+
+.from-to-h(@min_height, @max_height, @content){
+  @media screen and (min-height: @min_height) and (max-height: @max_height){
+    @content();
+  }
+}
+
+
+
+.from-o(@min_width, @orient, @content){
+  @media screen and (min-width: @min_width) and (orientation: @orient){
+    @content();
+  }
+}
+
+.from-h-o(@min_height, @orient, @content){
+  @media screen and (min-height: @min_height) and (orientation: @orient){
+    @content();
+  }
+}
+
+
+.to(@max_width, @name, @value){
+  @media screen and (max-width: @max_width){
+    @{name}: @value;
+  }
+}
+
+.to-block(@max_width, @content){
+  @media screen and (max-width: @max_width){
+    @content();
+  }
+}
+
+.to-h(@max_height, @content){
+  @media screen and (max-height: @max_height){
+    @content();
+  }
+}
+
+.to-o(@max_width, @orient, @content){
+  @media screen and (max-width: @max_width) and (orientation: @orient){
+    @content();
+  }
+}
+
+
+.to-h-o(@max_height, @orient, @content){
+  @media screen and (max-height: @max_height) and (orientation: @orient){
+    @content();
+  }
+}
+
+
+.from-to-o(@min_width, @max_width, @orient, @content){
+  @media screen and (min-width: @min_width) and (max-width: @max_width) and (orientation: @orient){
+    @content();
+  }
+}
+
+.from-to-h-o(@min_height, @max_height, @orient, @content){
+  @media screen and (min-height: @min_height) and (max-height: @max_height) and (orientation: @orient){
+    @content();
+  }
+}
+
+
+.clearfix(){
+  &::after{
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+
+
+.landscape-w-h( @width, @height, @name, @value ) {
+  @media screen and (min-height: @height) and (max-width: @width) and (orientation: landscape) {
+    @{name}: @value;
+  }
+}
