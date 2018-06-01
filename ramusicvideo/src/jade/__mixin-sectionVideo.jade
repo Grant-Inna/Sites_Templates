@@ -1,0 +1,14 @@
+mixin section-video( numb, videoName, when, views)
+    .section__video-wrapper
+        .section__video-image
+            img( src="../img/content/img-#{numb}.png" )
+        .section__video-info-wrapper
+            .video__info-name #{ videoName }
+            .video__info-wrapper
+                .video__info-date-wrapper
+                    .video__date-icon
+                    .video__date-day #{ when }
+                .video__info-views-wrapper
+                    .video__views-icon
+                    .video__views-number #{ views }
+

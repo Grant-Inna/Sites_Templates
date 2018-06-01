@@ -30,6 +30,12 @@ gulp.task('imageMIN', function() {
         .pipe(notify('Images Compress Success!'));
 });
 
+gulp.task('imageMINDir', function() {
+    return gulp.src( 'src/img/**/*.{png,jpg,jpeg,svg}' )
+        .pipe(imagemin())
+        .pipe(gulp.dest( 'production/img/**/' ))
+        .pipe(notify('Images Compress Success!'));
+});
 
 gulp.task('CSS', function() {
     return gulp.src( 'src/css/style.less' )
@@ -51,11 +57,13 @@ gulp.task('watch_CSS', ['browser'], function() {
 
 gulp.task('watch_imageMIN', function() {
     gulp.watch('src/img/*.{png,jpg,jpeg,svg}', ['imageMIN']);
+    gulp.watch('src/img/**/*.{png,jpg,jpeg,svg}', ['imageMINDir']);
     gulp.watch('src/img/*.{png,jpg,jpeg,svg}').on('change', browserSync.reload)
 });
 
 gulp.task('watch_JADE', ['browser'], function() {
     gulp.watch('src/*.jade', ['jade']);
+    gulp.watch('src/jade/*.jade', ['jade']);
     gulp.watch('src/*.jade').on('change', browserSync.reload)
 });
 

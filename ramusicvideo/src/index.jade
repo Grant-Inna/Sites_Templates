@@ -4,23 +4,17 @@ html
         include ../../common/head
     body
         #container
-            .top-block__wrapper
-                .top-block-one
-                    div.big-text Поддержка сайта для абонентов Билайн
-                    div
-                        strong.strong-text 8(800)555-35-35
-                .top-block-two
-                    div.big-text Оператор сайта —&nbsp;
-                        strong.strong-text 8(800)775-77-49
-                    div.small-text Подключение/отключение услуги (звонок бесплатный)
-            .header__wrapper
-                .header__mobile-menu
-                .header__logo
-                .header__age
-            .header__description Мобильный развлекательный портал
+            include jade/header
             .header__images-wrapper
-            include _mixin-indexSection
-            +index-section
-            +index-section
-            +index-section
-            include footer
+                .header__images-padding
+                .header__images-absolute
+                    include jade/_mixin-headerImages
+                    +image-wrapper( 1 )
+                    +image-wrapper( 2 )
+                    +image-wrapper( 3 )
+                    +image-wrapper( 4 )
+            include jade/_mixin-indexSection
+            +index-section( 'Приколы', '168', 3, 'Best fails from UK in 2018 year', '2018-07-17 17:12:42', '2356', 4, 'Like a Boss compilation', '2018-11-11 12:10:42', '1633'  )
+            +index-section( 'Животные', '135', 1, 'Best fails from UK in 2018 year', '2018-07-17 17:12:42', '2356', 2, 'Like a Boss compilation', '2018-11-11 12:10:42', '1633'  )
+            +index-section( 'Игры', '189', 4, 'Best fails from UK in 2018 year', '2018-07-17 17:12:42', '2356', 3, 'Like a Boss compilation', '2018-11-11 12:10:42', '1633'  )
+            include jade/footer

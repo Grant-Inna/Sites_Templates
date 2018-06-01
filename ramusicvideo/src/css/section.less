@@ -1,0 +1,156 @@
+.small-m() {
+  margin-right: .8rem;
+}
+.normal-m() {
+  margin-right: 1.1rem;
+}
+.big-m() {
+  margin-right: 1.5rem;
+}
+.section__wrapper {
+
+
+  box-sizing: border-box;
+  padding: 1rem;
+  height: auto;
+  margin: .5rem auto;
+}
+.section__caption {
+  .flex;
+  .justify-start;
+  .items-end;
+  .full-size;
+
+  padding: 1rem 0;
+  margin: 1rem 0;
+
+  border-bottom: 1px solid @color-body-darker;
+}
+.section__caption-icon {
+  @section__caption-icon-size: 1.7rem;
+  width: @section__caption-icon-size;
+  height: @section__caption-icon-size;
+
+  background: url("../img/s-caption-icon.png") center no-repeat;
+  background-size: contain;
+
+  .small-m;
+}
+.section__caption-name {
+  .medium;
+  .bigger-text;
+
+  .small-m;
+}
+.section__caption-howMuch {
+  .gray-text;
+}
+
+
+.section__video-wrapper {
+  .full-width;
+  .flex;
+  .items-center;
+  .justify-start;
+
+  box-sizing: border-box;
+  padding: 1rem 0;
+
+  border-bottom: 1px solid @color-body-darker;
+}
+.section__video-image {
+  .flex-center;
+  .full-height;
+  width: 5rem;
+
+  background: @color-body-darker;
+
+  .big-m;
+
+  > img {
+    border-radius: 1px;
+    box-shadow: @shadow-images;
+  }
+}
+.section__video-info-wrapper {
+  width: 70%;
+  min-width: 200px;
+  .column;
+  .justify-center;
+  .items-start;
+}
+.video__info-name {
+  .full-width;
+  .medium;
+  .big-text;
+
+  margin-bottom: .5rem;
+}
+
+.video__info-wrapper {
+  .full-width;
+
+  .flex;
+  .items-end;
+  .justify-between;
+}
+
+.video__info-date-wrapper {
+  .flex;
+  .items-center;
+  .justify-start;
+
+
+  .thin;
+}
+.video__date-icon {
+  @video__date-icon-size: 1rem;
+  width: @video__date-icon-size;
+  height: @video__date-icon-size;
+
+  background: url("../img/v-data-icon.png") center no-repeat;
+  background-size: contain;
+
+  .small-m;
+}
+.video__date-day {
+  .small-text;
+}
+
+.video__info-views-wrapper {
+  .flex;
+  .items-center;
+  .justify-end;
+}
+.video__views-icon {
+  @video__date-icon-size: 1rem;
+  width: @video__date-icon-size;
+  height: @video__date-icon-size;
+
+  background: url("../img/v-views-icon.png") center no-repeat;
+  background-size: contain;
+
+  .small-m;
+}
+.video__views-number {
+  .small-text;
+
+  .thin;
+}
+
+
+
+
+.section__button {
+  .common_button;
+}
+.section__button-text {
+  .common_button-text;
+}
+.section__button-button {
+  .common_button-icon;
+
+  background: url("../img/arrow-right.png") center no-repeat;
+  background-size: contain;
+
+}
