@@ -88,14 +88,14 @@ html {
 
 body {
   font-size: 1rem;
+  background: @back-body;
   color: @color-body;
   min-width: 320px;
-  min-height: 320px;
+  width: 100%;
+  height: auto;
 
   margin: 0 auto;
 
-  width: 100vw;
-  height: auto;
 }
 
 #container {
@@ -103,7 +103,6 @@ body {
   max-width: @lg;
   max-height: @lg;
   margin: 0 auto;
-  background: @back-body;
 
   box-sizing: border-box;
 }
@@ -131,7 +130,6 @@ body {
 
 .small-text {
   font-size: .9rem;
-  color: @gray;
 }
 .gray-text {
   color: @gray;
@@ -141,4 +139,14 @@ body {
 }
 .bigger-text {
   font-size: 1.5rem;
+}
+
+.small-m() {
+  margin-right: .8rem;
+}
+.normal-m() {
+  margin-right: 1.1rem;
+}
+.big-m() {
+  margin-right: 1.5rem;
 }
