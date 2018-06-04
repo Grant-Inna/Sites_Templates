@@ -23,6 +23,19 @@ gulp.task( 'copyFonts', function() {
         .pipe(gulp.dest( 'production/font/' ))
 });
 
+
+gulp.task( 'copyJS', function() {
+    return gulp.src( 'src/js/*.js' )
+        .pipe(gulp.dest( 'production/js/' ))
+});
+
+gulp.task('watch_JS', ['browser'], function() {
+    gulp.watch('src/js/*.js', ['copyJS']);
+    gulp.watch('src/css/*.js').on('change', browserSync.reload)
+});
+
+
+
 gulp.task('imageMIN', function() {
     return gulp.src( 'src/img/*.{png,jpg,jpeg,svg}' )
         .pipe(imagemin())
@@ -75,5 +88,5 @@ gulp.task('jade', function() {
 
 
 
-gulp.task('default', ['copyFonts', 'CSS', 'jade', 'watch_JADE', 'watch_CSS', 'imageMIN', 'watch_imageMIN']);
+gulp.task('default', ['copyFonts', 'copyJS', 'watch_JS', 'CSS', 'jade', 'watch_JADE', 'watch_CSS', 'imageMIN', 'watch_imageMIN']);
 gulp.task('images', ['imageMIN', 'watch_imageMIN']);

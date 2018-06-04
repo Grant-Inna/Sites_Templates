@@ -13,11 +13,13 @@
     "gulp-jade": "^1.1.0",
     "gulp-less": "*",
     "gulp-notify": "^3.0.0",
-    "gulp-rename": "^1.2.2"
+    "gulp-rename": "^1.2.2",
+    "jquery": "^3.3.1"
   },
   "author": "Inna Grant",
   "license": "ISC",
   "dependencies": {
+    "jquery-lite": "^2.2.3",
     "smart-grid": "^2.0.1"
   }
 }
