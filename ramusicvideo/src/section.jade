@@ -1,0 +1,25 @@
+doctype
+html
+    head
+        include ../../common/head
+    body
+        #container
+            include jade/header
+            include jade/header-images
+            .section__wrapper
+                .section__caption
+                    .section__caption-icon
+                    .section__caption-name Приколы
+                    .section__caption-howMuch (168 видео)
+            include jade/_mixin-sectionVideo
+            +section-video( 1 )
+            +section-video( 2 )
+            +section-video( 3 )
+            +section-video( 4 )
+
+
+
+            include jade/footer
+        script( type="text/javascript", src="js/jquery.slim.js" )
+        script( type="text/javascript", src="js/custom.js" )
+

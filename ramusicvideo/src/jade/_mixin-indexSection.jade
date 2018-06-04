@@ -4,9 +4,9 @@ mixin index-section( caption, howMuch, numb, videoName, when, views, numb2, vide
             .section__caption-icon
             .section__caption-name #{ caption }
             .section__caption-howMuch (#{ howMuch } видео)
-        include __mixin-sectionVideo
-        +section-video( numb, videoName, when, views )
-        +section-video( numb2, videoName2, when2, views2 )
+        include __mixin-indexVideo
+        +index-video( numb, videoName, when, views )
+        +index-video( numb2, videoName2, when2, views2 )
         a.section__button( href="section.html")
             .section__button-text Перейти в категорию
             .section__button-button

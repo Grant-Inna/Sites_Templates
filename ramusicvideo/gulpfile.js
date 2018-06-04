@@ -70,7 +70,7 @@ gulp.task('watch_CSS', ['browser'], function() {
 
 gulp.task('watch_imageMIN', function() {
     gulp.watch('src/img/*.{png,jpg,jpeg,svg}', ['imageMIN']);
-    gulp.watch('src/img/**/*.{png,jpg,jpeg,svg}', ['imageMINDir']);
+    gulp.watch('src/img/content/*.{png,jpg,jpeg,svg}', ['imageMINDir']);
     gulp.watch('src/img/*.{png,jpg,jpeg,svg}').on('change', browserSync.reload)
 });
 
@@ -81,7 +81,7 @@ gulp.task('watch_JADE', ['browser'], function() {
 });
 
 gulp.task('jade', function() {
-    return gulp.src( 'src/index.jade' )
+    return gulp.src( 'src/*.jade' )
         .pipe(jade())
         .pipe(gulp.dest( 'production/' ))
 });
