@@ -70,18 +70,38 @@
   width: auto;
   .transition;
   position: absolute;
-  top: -999px;
+  z-index: 100;
+  top: -9px;
   left: -999px;
   opacity: 0;
 
-  padding: 1rem;
+  padding: 1rem 2rem;
   min-height: 5rem;
 
-  background: whitesmoke;
-
+  background: white;
 }
 
-/* end of menu block */
+.menu-block__item-container {
+  .flex;
+  .items-center;
+  .justify-start;
+  color: #80959e;
+  font-size: 1.5rem;
+  padding: 2rem 3.5rem 2rem 1rem;
+
+  &:first-child {
+    border-bottom: 1px solid #80959e;
+  }
+}
+.menu-block__icon {
+  display: block;
+  margin-right: 1rem;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.menu-block__text {}
+
+  /* end of menu block */
 
 
 
@@ -100,7 +120,7 @@
   .side-header-elems;
   .justify-end;
 
-  height: 55%;
+  height: 45%;
 
   background: url('../img/18.png') right no-repeat;
   background-size: auto 100%;
