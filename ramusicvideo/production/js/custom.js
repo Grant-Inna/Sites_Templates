@@ -6,6 +6,11 @@ $(function(){
     })
     $( ".section__container" ).bind( "mouseenter mouseleave", function() {
         $( '.section__popUp-block', this ).toggleClass("show-popUp");
-        console.info( 'Пиу!' )
+        
+        setTimeout(
+            $( '.section__popUp-block', this ).toggleClass("display-popUp"), 3000);
+    
+        //
+        // console.info( 'Пиу!' )
     });
 })(jQuery);
