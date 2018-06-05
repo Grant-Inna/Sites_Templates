@@ -240,25 +240,22 @@
 }
 .section__button-wrapper {
   .un-link;
-  width: 70%;
-  min-width: 190px;
-  max-width: 290px;
+  width: auto;
   height: auto;
   min-height: @button-height;
 
   padding: 1rem 1.4rem 1rem 1rem;
 
-  .flex;
-  .items-center;
-  .justify-between;
+  .flex-center;
 
   border-radius: 40px;
   background: @green;
 }
 .section__button-icon {
   .full-height;
-  min-height: @button-height + 10px;
+  height: @button-height + 5px;
   width: @button-height + 10px;
+  margin-right: 1.2rem;
   background: url("../img/button-icon.png") left no-repeat;
   background-size: contain;
 }
@@ -266,6 +263,8 @@
   color: white;
   .medium;
   font-size: 1.8rem;
+
+  .xxs( font-size, 1.4rem );
 }
 /*  end of pop up block  */
 
