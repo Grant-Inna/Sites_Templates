@@ -162,6 +162,7 @@
 }
 
 .header__image-content {
+  .un-link;
   .full-width;
   .flex-center;
   align-self: center;
@@ -169,6 +170,10 @@
   display: block;
   width: 32%;
   margin: 2px;
+
+  &:active > img {
+    box-shadow: inset @shadow-images;
+  }
 
   > img {
     width: 100%;
