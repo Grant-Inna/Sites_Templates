@@ -22,3 +22,95 @@
   .bold;
   font-size: 2rem;
 }
+
+/* form */
+
+.form-elements() {
+  .full-width;
+  height: 4rem;
+  border-radius: 40px;
+  border: 1px solid @back-body - 20;
+
+  font-size: 1.5rem;
+
+  .flex-center;
+}
+.form-buttons() {
+  .un-button;
+  .thin;
+  color: @back-body;
+}
+
+.log__input {
+  .form-elements;
+  position: relative;
+  background: @back-input;
+  color: @back-input - 220;
+
+
+  & .input {
+    .un-input;
+    .full-absolute;
+    border-radius: 40px;
+    text-align: center;
+    color: @back-input - 220;
+    font-size: 1.5rem;
+
+    &:invalid {
+      border-color: red;
+    }
+  }
+}
+
+.log__button-yes {
+  .form-elements;
+  .form-buttons;
+
+  background: @green;
+
+  margin: 1rem auto;
+  padding: 1.3rem 2rem;
+  .transition;
+
+  &:hover {
+    .transition;
+    background: @green - 15;
+  }
+}
+.log__button-no {
+  .form-elements;
+  .form-buttons;
+
+  background: @dark-gray;
+  margin: 1rem auto;
+  padding: 1.3rem 2rem;
+  .transition;
+
+  &:hover {
+    .transition;
+    background: @dark-gray - 10;
+  }
+}
+
+.log__button {
+  .full-size;
+  .flex-center;
+}
+
+.log__button-text {
+  .flex-center;
+  .full-height;
+}
+.log__button-icon {
+  .flex-center;
+  .full-height;
+
+  @section__caption-icon-size: 1.2rem;
+  width: @section__caption-icon-size;
+  height: @section__caption-icon-size;
+
+  margin: .3rem 0 0 .7rem;
+
+  background: url("../img/arrow-right.png") center no-repeat;
+  background-size: contain;
+}
