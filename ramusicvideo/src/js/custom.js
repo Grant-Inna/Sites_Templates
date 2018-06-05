@@ -8,7 +8,7 @@ $(function(){
         $( '.section__popUp-block', this ).toggleClass("show-popUp");
         
         setTimeout(
-            $( '.section__popUp-block', this ).toggleClass("display-popUp"), 3000);
+            $( '.section__popUp-block', this ).toggleClass("display-popUp"), 4000);
     
         //
         // console.info( 'Пиу!' )
