@@ -5,7 +5,7 @@ $(function(){
         $( ".menu-block__wrapper" ).toggleClass( "menu-show" )
     })
     $( ".section__container" ).bind( "mouseenter mouseleave", function() {
-        //$( this ).toggleClass("entered");
-        console.info("Catch it!")
+        $( '.section__popUp-block', this ).toggleClass("show-popUp");
+        console.info( 'Пиу!' )
     });
 })(jQuery);

@@ -190,6 +190,8 @@
   padding: .4rem .8rem;
 
   background: rgba(31, 59, 73, .7);
+
+  z-index: 10;
 }
 .section__likes-wrapper {
   left: 0;
@@ -213,12 +215,59 @@
 .time__text {
   color: white;
   font-size: 1.2rem;
-  .medium;
+  .thin;
 }
 .likes__count {}
 .time__text {}
 
+/*  pop up block  */
 
+@button-height: 50px;
+
+
+.section__popUp-block {
+  .full-size;
+  .flex-center;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  .transition;
+
+  background: rgba(31, 59, 73, .7);
+
+  z-index: 5;
+}
+.section__button-wrapper {
+  .un-link;
+  width: 70%;
+  min-width: 190px;
+  max-width: 290px;
+  height: auto;
+  min-height: @button-height;
+
+  padding: 1rem 1.4rem 1rem 1rem;
+
+  .flex;
+  .items-center;
+  .justify-between;
+
+  border-radius: 40px;
+  background: @green;
+}
+.section__button-icon {
+  .full-height;
+  min-height: @button-height + 10px;
+  width: @button-height + 10px;
+  background: url("../img/button-icon.png") left no-repeat;
+  background-size: contain;
+}
+.section__button-innerText {
+  color: white;
+  .medium;
+  font-size: 1.8rem;
+}
+/*  end of pop up block  */
 
 
 .section__content {

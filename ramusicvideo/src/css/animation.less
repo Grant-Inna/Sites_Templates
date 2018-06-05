@@ -27,6 +27,7 @@
   animation: fadeIn;
 }
 
+
 @keyframes fadeIn {
  0% {
    top: -999px;
@@ -43,4 +44,27 @@
    left: 0;
    opacity: 1;
  }
+}
+
+
+/* section block */
+
+.section__popUp-block.show-popUp {
+  top: 0;
+  opacity: 1;
+  .transition;
+  animation: show;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: .7;
+  }
+  100% {
+    opacity: 1;
+  }
+
 }
