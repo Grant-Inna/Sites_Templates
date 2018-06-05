@@ -27,9 +27,12 @@
 
 .form-elements() {
   .full-width;
-  height: 4rem;
+  height: auto;
+  min-height: 2rem;
   border-radius: 40px;
   border: 1px solid @back-body - 20;
+
+  padding: 1rem 0;
 
   font-size: 1.5rem;
 
@@ -101,7 +104,6 @@
   .flex-center;
   .full-height;
 
-  margin-bottom: .3rem;
 }
 .log__button-icon {
   .flex-center;
@@ -111,7 +113,7 @@
   width: @section__caption-icon-size;
   height: @section__caption-icon-size;
 
-  margin: .1rem 0 0 .7rem;
+  margin: 0 0 0 .7rem;
 
   background: url("../img/arrow-right.png") center no-repeat;
   background-size: contain;
