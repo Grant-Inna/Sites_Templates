@@ -1,0 +1,40 @@
+
+
+.common_button() {
+  .un-link;
+  .flex-center;
+  max-width: 280px;
+  min-width: 220px;
+  width: 55%;
+  height: auto;
+
+  margin: 1rem auto;
+  padding: 1.3rem 2rem;
+
+  border-radius: 2px;
+  background: @pink;
+
+  .transition;
+
+  &:hover {
+    .transition;
+    background: @pink - 15;
+  }
+
+}
+.common_button-text() {
+  .thin;
+  .big-text;
+  color: @back-body;
+
+  .normal-m;
+}
+.common_button-icon() {
+  @section__caption-icon-size: 1.3rem;
+  width: @section__caption-icon-size;
+  height: @section__caption-icon-size;
+
+  //background: url("../img/arrow-right.png") center no-repeat;
+  background-size: contain;
+
+}

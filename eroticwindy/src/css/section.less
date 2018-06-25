@@ -6,6 +6,7 @@
   height: auto;
   margin: .5rem auto;
 }
+
 .section__caption {
   .flex;
   .justify-start;
@@ -61,7 +62,6 @@
 
   > img {
     border-radius: 1px;
-    box-shadow: @shadow-images;
     max-width: 100%;
   }
 }
@@ -137,7 +137,25 @@
 
 
 .section__button {
-  .common_button;
+  .un-link;
+  .flex-center;
+  max-width: 280px;
+  min-width: 220px;
+  width: 55%;
+  height: auto;
+
+  margin: 1rem auto;
+  padding: 1.3rem 2rem;
+
+  border-radius: 2px;
+  background: @main-colour;
+
+  .transition;
+
+  &:hover {
+    .transition;
+    background: @main-colour - 15;
+  }
 }
 .section__button-text {
   .common_button-text;
@@ -150,8 +168,90 @@
 
 }
 
+.section__more-button {
+  .un-link;
+  .flex-center;
+  max-width: 280px;
+  min-width: 220px;
+  width: 55%;
+  height: auto;
+
+  margin: 1rem auto;
+  padding: 1.3rem 2rem;
+
+  border-radius: 2px;
+
+  background: transparent;
+  border: 1px solid @words-main;
+
+  .transition;
+
+  &:hover {
+    .transition;
+    background: @back-body - 15;
+  }
+}
+.section__more-text {
+  .common_button-text;
+
+  color: @words-main;
+}
+.section__more-icon {
+  .common_button-icon;
+
+  background: url("../img/button-more.png") center no-repeat;
+  background-size: contain;
+}
+
+.small-section__wrapper {
+
+  box-sizing: border-box;
+  padding: 4rem;
+  height: auto;
+  margin: .5rem auto;
+
+  .flex;
+  .items-center;
+  .justify-between;
+
+}
+
+
+.page-number__wrapper {
+  .flex-center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 2px;
+  margin: 2px;
+
+  .medium;
+  font-size: 1.5rem;
+  color: @words-main;
+
+
+  border: 1px solid transparent;
+  .transition;
+
+  &:hover {
+    .transition;
+    border: 1px solid @main-colour;
+  }
+}
+
+.chosen-page {
+  background: @main-colour;
+  color: whitesmoke;
+}
+
 
 /* section page */
+
+.section__caption-name {
+  .medium;
+  .bigger-text;
+
+  .small-m;
+}
 
 .section__caption-name-big {
   .medium;
@@ -160,6 +260,18 @@
   .small-m;
   font-size: 2rem;
 }
+
+.section__caption-icon {
+  @section__caption-icon-size: 1.7rem;
+  width: @section__caption-icon-size;
+  height: @section__caption-icon-size;
+
+  background: url("../img/s-caption-icon.png") center no-repeat;
+  background-size: contain;
+
+  .small-m;
+}
+
 .section__caption-icon-big {
   .section__caption-icon;
   @section__caption-icon-size: 2rem;
@@ -167,7 +279,7 @@
   height: @section__caption-icon-size;
 }
 .section__caption-howMuch-big {
-  .section__caption-howMuch;
+  .gray-text;
   font-size: 1.2rem;
 }
 
@@ -176,7 +288,6 @@
   display: block;
   margin: 1.5rem 0 0;
   background: white;
-  box-shadow: 6px 13px 20px 0 rgba(69, 69, 69, 0.2);
   border-radius: 2px;
 
   border: .5px solid @back-body - 20;
@@ -207,7 +318,7 @@
   box-sizing: border-box;
   padding: .4rem .8rem;
 
-  background: rgba(31, 59, 73, .7);
+  background: @main-dark-back - 5;
 
   z-index: 10;
 }
@@ -240,7 +351,7 @@
 
 /*  pop up block  */
 
-@button-height: 50px;
+@button-height: 40px;
 
 
 .section__popUp-block {
@@ -252,7 +363,7 @@
   left: 0;
   .transition;
 
-  background: rgba(31, 59, 73, .7);
+  background: @main-dark-back;
 
   z-index: 5;
 
@@ -263,20 +374,20 @@
   height: auto;
   min-height: @button-height;
 
-  padding: 1rem 1.7rem 1rem 1rem;
+  padding: 1rem 1.5rem;
 
   .flex-center;
 
-  border-radius: 40px;
-  background: @green;
+  border-radius: 2px;
+  background: @main-colour;
 
   display: none;
 }
 .section__button-icon {
   .full-height;
-  height: @button-height + 5px;
-  width: @button-height + 10px;
-  margin-right: .3rem;
+  height: 1.8rem;
+  width: 1.8rem;
+  margin-right: 1rem;
   background: url("../img/button-icon.png") left no-repeat;
   background-size: contain;
 }
@@ -318,12 +429,21 @@
 }
 
 .video__info-name-big {
-  .video__info-name;
+  .full-width;
+  .medium;
+  .big-text;
+
+  margin-bottom: .5rem;
 
   .bigger-text;
 }
 .video__info-date-wrapper-big {
-  .video__info-date-wrapper;
+  .flex;
+  .items-center;
+  .justify-start;
+
+
+  .thin;
 
   & .video__date-day {
     font-size: 1.2rem;
@@ -336,7 +456,9 @@
   }
 }
 .video__info-views-wrapper-big {
-  .video__info-views-wrapper;
+  .flex;
+  .items-center;
+  .justify-end;
 
   & .video__views-icon {
     @video__date-icon-size: 1.3rem;

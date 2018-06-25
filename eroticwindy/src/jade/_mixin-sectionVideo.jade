@@ -1,0 +1,26 @@
+mixin section-video( img )
+    .section__wrapper
+        .section__container
+            .section__img-holder
+                .section__padding
+                .section__absolute
+                    .section__content
+                        img( src="img/content/big-#{ img }.png" )
+                .section__likes-wrapper
+                    .likes__icon
+                    .likes__count 5 234
+                .section__time-wrapper
+                    .time__text 4:48
+                .section__popUp-block
+                    a( href="video.html" ).section__button-wrapper
+                        .section__button-icon
+                        .section__button-innerText Смотреть видео
+            .section__info-wrapper
+                .video__info-name-big FailArmy's Ode to the UK...
+                .video__info-wrapper
+                    .video__info-date-wrapper-big
+                        .video__date-icon
+                        .video__date-day 2017-12-15 23:15:24
+                    .video__info-views-wrapper-big
+                        .video__views-icon
+                        .video__views-number 2566

@@ -1,0 +1,12 @@
+mixin index-section( caption, howMuch, numb, videoName, when, views, numb2, videoName2, when2, views2 )
+    .section__wrapper
+        .section__caption
+            .section__caption-icon
+            .section__caption-name #{ caption }
+            .section__caption-howMuch (#{ howMuch } видео)
+        include __mixin-indexVideo
+        +index-video( numb, videoName, when, views )
+        +index-video( numb2, videoName2, when2, views2 )
+        a.section__button( href="section.html")
+            .section__button-text Перейти в категорию
+            .section__button-button
