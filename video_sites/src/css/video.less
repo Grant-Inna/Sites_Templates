@@ -1,0 +1,88 @@
+.video__wrapper {
+  .section__wrapper;
+}
+
+.video__container {
+  .un-link;
+  display: block;
+  margin: 1.5rem 0 0;
+  border-radius: 2px;
+  width: 100%;
+}
+
+.section__darkBack {
+  .full-size;
+  .flex-center;
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  .transition;
+
+  background: @main-dark-back;
+
+  z-index: 5;
+}
+
+.section__video-icon {
+  .section__button-icon;
+
+  background: url("../img/video-button-icon.png") left no-repeat;
+  background-size: contain;
+
+  .un-link;
+
+  height: 7rem;
+  width: 7rem;
+  .transition;
+  z-index: 7;
+
+  &:hover {
+    .transition;
+    height: 8rem;
+    width: 8rem;
+    background: url("../img/video-button-icon-hover.png") left no-repeat;
+    background-size: contain;
+  }
+
+
+}
+
+.video__button {
+  .section__button;
+
+  max-width: 18rem;
+  min-width: 16rem;
+
+  margin-right: auto;
+  margin-left: 1rem;
+}
+
+.video__caption {
+  .section__caption;
+}
+
+.video__caption-icon-big {
+  .section__caption-icon-big;
+
+  background: url("../img/dec-icon.png") center no-repeat;
+  background-size: contain;
+
+}
+.video__rec-icon-big {
+  .section__caption-icon-big;
+
+  background: url("../img/rec-video-icon.png") center no-repeat;
+  background-size: contain;
+}
+.video__caption-name-big {
+  .section__caption-name-big;
+}
+
+.video__about {}
+.video__about-text {
+  .full-width;
+  font-size: 1.5rem;
+  .thin;
+  text-align: left;
+}

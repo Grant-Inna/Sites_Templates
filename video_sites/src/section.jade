@@ -1,0 +1,38 @@
+doctype
+html
+    head
+        include ../../common/head
+    body
+        #container
+            include jade/header
+            include jade/header-images
+            .section__wrapper
+                .section__caption
+                    //.section__caption-icon-big
+                    .section__caption-name-big Приколы
+                    .section__caption-howMuch-big (168 видео)
+                include jade/_mixin-sectionVideo
+                +section-video( 1 )
+                +section-video( 2 )
+                +section-video( 3 )
+                +section-video( 4 )
+
+
+            a.section__more-button( href="nuzhno-bol'she-video!")
+                .section__more-text Показать ещё
+                .section__more-icon
+            .small-section__wrapper
+                include jade/_mixim-pageNumber
+                +page-number(1, 'chosen-page')
+                +page-number(2, '')
+                +page-number(3, '')
+                +page-number(4, '')
+                +page-number(5, '')
+                +page-number('...', 'no-border-number')
+                +page-number(75, '')
+
+
+            include jade/footer
+        script( type="text/javascript", src="js/jquery.slim.js" )
+        script( type="text/javascript", src="js/custom.js" )
+

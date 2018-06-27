@@ -1,0 +1,58 @@
+doctype
+html
+    head
+        include ../../common/head
+    body
+        #container
+            include jade/header
+            .video__wrapper
+                .video__container
+                    .section__img-holder
+                        .section__padding
+                        .section__absolute
+                            .section__content
+                                img( src="img/content/big-3.png" )
+                        .section__likes-wrapper
+                            .likes__icon
+                            .likes__count 5 234
+                        .section__time-wrapper
+                            .time__text 4:48
+                        .section__darkBack
+                            a( href="log-in.html" ).section__video-icon
+                    .section__info-wrapper
+                        .video__info-name-big FailArmy's Ode to the UK...
+                        .video__info-wrapper
+                            .video__info-date-wrapper-big
+                                .video__date-icon
+                                .video__date-day 2017-12-15 23:15:24
+                            .video__info-views-wrapper-big
+                                .video__views-icon
+                                .video__views-number 2566
+            a.video__button( href="log-in.html")
+                .section__button-text Получить доступ
+                .section__button-button
+            .video__wrapper
+                .video__caption
+                    //.video__caption-icon-big
+                    .video__caption-name-big Описание
+                .video__about-text Лучшие приколы из Vine
+            .video__wrapper
+                .video__caption
+                    //.video__rec-icon-big
+                    .video__caption-name-big Рекомендуемые видео
+
+                include jade/__mixin-indexVideo
+                +index-video( 2, 'FailArmy Ode to the UK...', '2017-12-15 23:15:24', '3214' )
+                +index-video( 1, 'Like a boss compilation...', '2017-10-15 13:12:56', '4754' )
+                +index-video( 3, 'Like a boss compilation...', '2017-10-15 13:12:56', '4754' )
+                +index-video( 4, 'FailArmy Ode to the UK...', '2017-10-15 13:12:56', '3526' )
+                +index-video( 3, 'Like a boss compilation...', '2017-10-15 13:12:56', '4754' )
+                +index-video( 1, 'FailArmy Ode to the UK...', '2017-10-15 13:12:56', '3526' )
+
+                a.section__button( href="section.html")
+                    .section__button-text Перейти в категорию
+                    .section__button-button
+
+            include jade/footer
+        script( type="text/javascript", src="js/jquery.slim.js" )
+        script( type="text/javascript", src="js/custom.js" )
