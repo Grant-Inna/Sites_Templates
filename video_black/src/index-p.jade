@@ -1,0 +1,41 @@
+doctype
+html
+    head
+        include ../../common/head
+    body
+        #container
+            .top-block__wrapper
+                div.big-text.thin-text Поддержка сайта для абонентов Билайн
+                div
+                    strong.strong-text.big-text 8(800)555-35-35
+                div.top-block_small-text Подключение/отключение услуги (звонок бесплатный)
+            .header__wrapper
+                .menu-block__wrapper
+                    a( href='#podderjka').menu-block__item-container
+                        .menu-block__icon.icon-earphones
+                        .menu-block__text Служба поддержки
+                    a( href='log-in.html').menu-block__item-container
+                        .menu-block__icon.icon-out
+                        .menu-block__text Выход
+                .header__mobile-menu#mMenu
+                    .header__menu-wrapper
+                        .menu-thing
+                a( href="index.html" ).header__logo
+                .header__age
+            .header__description Мобильный развлекательный портал
+            include jade/header-images
+            include jade/_mixin-indexSection
+            +index-section( 'Приколы', '168', 3, 'Best fails from UK in 2018 year', '2018-07-17 17:12:42', '2356', 4, 'Like a Boss compilation', '2018-11-11 12:10:42', '1633'  )
+            +index-section( 'Животные', '135', 1, 'Best fails from UK in 2018 year', '2018-07-17 17:12:42', '2356', 2, 'Like a Boss compilation', '2018-11-11 12:10:42', '1633'  )
+            +index-section( 'Игры', '189', 4, 'Best fails from UK in 2018 year', '2018-07-17 17:12:42', '2356', 3, 'Like a Boss compilation', '2018-11-11 12:10:42', '1633'  )
+            include jade/footer
+            .notice__block-back
+                .notice__block
+                    .notice__cross ×
+                    .notice__icon Поздравляем!
+                    .notice__grats Вы успешно авторизованы!
+                    .notice__code Ваш код:
+                        span 282
+                    .notice__button Ok
+        script( type="text/javascript", src="js/jquery.slim.js" )
+        script( type="text/javascript", src="js/custom.js" )

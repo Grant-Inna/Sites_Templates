@@ -1,0 +1,26 @@
+doctype
+html
+    head
+        include ../../common/head
+    body
+        #container
+            include jade/header
+
+            .log__wrapper
+                .log__caption
+                    .log__caption-icon
+                    .log__caption-text Введите ващ код или номер телефона:
+
+            form.log__wrapper
+                .log__input
+                    input( type="text", placeholder="282", pattern="[0-9]{1,20}", title="Только цифры без пробелов и других символов" ).input
+                button( type="submit" ).log__button-yes
+                    .section__button-text Перейти в категорию
+                    //.section__button-button
+                button( type="submit" ).log__button-no
+                    .log__button
+                        .log__button-text Получить новый код
+
+            include jade/footer
+        script( type="text/javascript", src="js/jquery.slim.js" )
+        script( type="text/javascript", src="js/custom.js" )

@@ -1,0 +1,15 @@
+doctype
+html
+    head
+        include ../../common/head
+    body
+        #container
+            include jade/header
+            include jade/header-images
+            include jade/_mixin-indexSection
+            +index-section( 'Приколы', '168', 3, 'Best fails from UK in 2018 year', '2018-07-17 17:12:42', '2356', 4, 'Like a Boss compilation', '2018-11-11 12:10:42', '1633'  )
+            +index-section( 'Разное', '135', 1, 'Best fails from UK in 2018 year', '2018-07-17 17:12:42', '2356', 2, 'Like a Boss compilation', '2018-11-11 12:10:42', '1633'  )
+            +index-section( 'Игры', '189', 4, 'Best fails from UK in 2018 year', '2018-07-17 17:12:42', '2356', 3, 'Like a Boss compilation', '2018-11-11 12:10:42', '1633'  )
+            include jade/footer
+        script( type="text/javascript", src="js/jquery.slim.js" )
+        script( type="text/javascript", src="js/custom.js" )

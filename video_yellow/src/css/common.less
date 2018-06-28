@@ -1,0 +1,157 @@
+
+@font-face {
+  font-family: "U";
+  src: url("../font/Ubuntu-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+
+@font-face {
+  font-family: "U-Bold";
+  src: url("../font/Ubuntu-Bold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: "U-Medium";
+  src: url("../font/Ubuntu-Medium.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  font-family: "U-Light";
+  src: url("../font/Ubuntu-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+
+.reset(){
+  body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,input,textarea,p,blockquote,th,td{
+    margin: 0;
+    padding: 0;
+  }
+  table{
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  fieldset,img,abbr{
+    border: 0;
+  }
+  address,caption,cite,code,dfn,em,strong,th,var{
+    font-style: normal;
+    font-weight: normal;
+  }
+  ul li{
+    list-style: none;
+  }
+  caption,th{
+    text-align: left;
+  }
+  h1,h2,h3,h4,h5,h6{
+    font-size: 100%;
+    font-weight: normal;
+  }
+  sup{
+    vertical-align: text-top;
+  }
+  sub{
+    vertical-align: text-bottom;
+  }
+  input,textarea,select{
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  legend{
+    color: #000;
+  }
+  article,aside,details,figcaption,figure,footer,header,menu,nav,section,main{
+    display: block;
+  }
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+
+html {
+  font-family: 'U', Open Sans, Helvetica, Arial, sans-serif;
+
+  .to( @lg, font-size, 14px );
+  .to( @md, font-size, 13px );
+  .to( @sm, font-size, 12px );
+  .to( @xsm, font-size, 12px );
+  .to( @xs, font-size, 11px );
+  font-weight: 400;
+}
+
+body {
+  font-size: 1rem;
+  background: @back-body;
+  color: @color-body;
+  min-width: 320px;
+  width: 100%;
+  height: auto;
+
+  margin: 0 auto;
+
+}
+
+#container {
+  .full-size;
+  max-width: @lg;
+  max-height: @lg;
+  margin: 0 auto;
+
+  box-sizing: border-box;
+}
+
+
+.thin(){
+  font-family: 'U-Light', Open Sans, Helvetica, Arial, sans-serif;
+}
+.bold(){
+  font-family: 'U-Bold', Open Sans, Helvetica, Arial, sans-serif;
+  font-weight: 800;
+}
+.medium() {
+  font-family: 'U-Medium', Open Sans, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+
+.thin-text {
+  .thin;
+}
+.strong-text {
+  .bold;
+}
+
+.small-text {
+  font-size: .9rem;
+}
+.gray-text {
+  color: @gray;
+}
+.big-text {
+  font-size: 1.3rem;
+}
+.bigger-text {
+  font-size: 1.5rem;
+}
+
+.small-m() {
+  margin-right: .8rem;
+}
+.normal-m() {
+  margin-right: 1.1rem;
+}
+.big-m() {
+  margin-right: 1.5rem;
+}
+
+.transition(){
+  transition: .3s;
+}
+

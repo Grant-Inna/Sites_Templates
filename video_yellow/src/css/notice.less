@@ -1,0 +1,104 @@
+.notice__block-back {
+  .full-size;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: rgba( 10, 10, 10, .3);
+
+  z-index: 200;
+
+  .flex-center;
+}
+.notice__block {
+  margin-bottom: 20%;
+  background: @back-body;
+  width: auto;
+  height: auto;
+  padding: 1.5rem;
+  border-radius: 5px;
+
+  min-width: 40%;
+
+  background: url('../img/back-modal.png') top no-repeat;
+  background-size: 100% 100%;
+}
+
+.notice__cross {
+  cursor: pointer;
+  margin-left: auto;
+  width: 2rem;
+  height: 2rem;
+  .flex-center;
+
+  color: @gray;
+  font-size: 3rem;
+
+  box-sizing: border-box;
+  padding-bottom: 1rem;
+
+  .transition;
+
+  &:hover {
+    color: @main-colour;
+    .transition;
+  }
+}
+.notice__icon {
+  margin: 2rem 2rem 0;
+  width: auto;
+  height: auto;
+
+/*  background: url('../img/grats-icon.png') center no-repeat;
+  background-size: auto 100%;*/
+
+  font-size: 3rem;
+  text-align: center;
+  .bold;
+}
+.notice__grats {
+  margin: 2rem auto 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  .thin;
+
+}
+.notice__code {
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 1.5rem;
+  .bold;
+
+  .flex-center;
+
+  > span {
+    display: inline-block;
+    margin-left: .5rem;
+    padding: .4rem .7rem;
+
+    border-radius: 2px;
+    background: @back-footer;
+    color: @words-main-second;
+  }
+
+}
+.notice__button {
+  cursor: pointer;
+  margin: 4rem 0 2.5rem;
+
+  width: auto;
+  height: auto;
+
+  color: @back-body;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 1.5rem;
+  .thin;
+
+  padding: 1rem 2rem;
+
+  background: @main-colour;
+  box-shadow: @shadow-images;
+}
