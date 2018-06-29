@@ -7,24 +7,29 @@
 }
 
 .log__caption {
-  .flex;
+ /* .flex;
   .items-start;
-  .justify-start;
+  .justify-start;*/
+
+  .column-center;
 }
 
 .log__caption-icon {
   height: 4rem;
   width: 4rem;
 
-  margin-right: 1.5rem;
+  //margin-right: 1.5rem;
 
-  background: url("../img/lock-icon.png") left no-repeat;
+  background: url("../img/lock-icon.png") center no-repeat;
   background-size: contain;
 }
 .log__caption-text {
   .bold;
   font-size: 2rem;
-  color: @words-main-second;
+  color: @words-main;
+  text-align: center;
+
+  margin-top: 1rem;
 }
 
 /* form */
@@ -51,8 +56,9 @@
 .log__input {
   .form-elements;
   position: relative;
-  background: @back-input;
+  //background: @back-input;
   color: @back-input - 220;
+  border: 1px solid @words-main;
 
 
   & .input {
@@ -88,8 +94,8 @@
   .form-elements;
   .form-buttons;
 
-  background: @back-section-wrapper-third;
-  color: @back-footer;
+  background: @back-input;
+  color: @words-main;
 
   margin: 0 auto 1rem;
   padding: 1.3rem 2rem;

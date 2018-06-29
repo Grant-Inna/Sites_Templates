@@ -1,7 +1,7 @@
-@main-colour: @red;
+@main-colour: @yellow;
 @main-dark-back: @black-back;
-@words-main: rgb(255, 255, 255);
-@words-main-second: #1d1d1d;
+@words-main-second: rgb(255, 255, 255);
+@words-main: #1d1d1d;
 
 
 @gray: rgb(161, 182, 192);
@@ -11,33 +11,34 @@
 @pink-opacity: rgba(255, 90, 90, 0.7);
 @blue: rgb(32, 131, 234);
 @red: rgb(199, 48, 48);
+@yellow: rgb(241, 241, 97);
 
 
 
-@back-body: rgb( 250, 250, 253 );
+@back-body: rgb( 253, 253, 253 );
 @back-input: rgb(241, 240, 241);
 @color-body-darker: @back-body - 30;
 @color-body: @words-main;
 
-@back-topBlock: rgb(179, 39, 39);
+@back-topBlock: rgb(0, 0, 0);
 @color-topBlock: rgb(255, 255, 255);
 @color-topBlock-strong: rgb(255, 255, 255);
 
-@back-header:rgb(236, 236, 236);
-@color-header-m: rgb(115, 115, 115);
+@back-header: rgb(255, 255, 255);
+@color-header-m: rgb(0, 0, 0);
 
-@back-head-desc: rgb(230, 230, 230);
+@back-head-desc: rgb(241, 241, 97);
 @color-head-desc: rgb(19, 20, 21);
 
 
-@back-popUp: @back-header;
-@color-popUp: @color-head-desc;
+@back-popUp: @back-topBlock;
+@color-popUp: @back-input;
 
-@back-section-wrapper: url('../img/back-index-section.png') center no-repeat;
+@back-section-wrapper: transparent;
 @back-section-wrapper-size: cover;
 @back-section-wrapper-second: transparent;
-@back-section-wrapper-third: rgb(26, 27, 30);
-@back-index-videos: rgb(11, 12, 13);
+@back-section-wrapper-third: rgb(255, 255, 255);
+@back-index-videos: rgb(255, 255, 255);
 
 
 @color-button: @back-body;
@@ -46,10 +47,14 @@
 @black-back: rgba(25, 20, 23, 0.6);
 //@black-back: rgba(6, 17, 25, 0.6);
 
-@back-footer: rgb(230, 230, 230);
-@color-footer: rgb(19, 20, 21);
+@back-footer: rgb(0, 0, 0);
+@color-footer: rgb(196, 196, 196);
 
 
 @back-section-videos-button: transparent; //@main-colour
 
 @shadow-images: none;
+@section-shadow:  7px 12px 40px 0px rgba(57, 57, 57, 0.09);
+
+
+@back-notice: rgb(255, 255, 255);// url('../img/back-modal.png') top no-repeat

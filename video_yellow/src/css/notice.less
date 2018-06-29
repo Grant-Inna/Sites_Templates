@@ -14,7 +14,6 @@
 }
 .notice__block {
   margin-bottom: 20%;
-  background: @back-body;
   width: auto;
   height: auto;
   padding: 1.5rem;
@@ -22,7 +21,7 @@
 
   min-width: 40%;
 
-  background: url('../img/back-modal.png') top no-repeat;
+  background: @back-notice;
   background-size: 100% 100%;
 }
 
@@ -75,12 +74,13 @@
 
   > span {
     display: inline-block;
-    margin-left: .5rem;
-    padding: .4rem .7rem;
+    margin-left: .7rem;
+    padding: .4rem .7rem .6rem;
 
     border-radius: 2px;
-    background: @back-footer;
-    color: @words-main-second;
+    background: url('../img/back-code.png') center no-repeat;
+    background-size: 100%;
+    color: @words-main;
   }
 
 }
@@ -91,11 +91,11 @@
   width: auto;
   height: auto;
 
-  color: @back-body;
+  color: @words-main;
   border-radius: 3px;
   text-align: center;
   font-size: 1.5rem;
-  .thin;
+
 
   padding: 1rem 2rem;
 
